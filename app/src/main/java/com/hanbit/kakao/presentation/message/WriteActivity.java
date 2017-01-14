@@ -8,14 +8,11 @@ import com.hanbit.kakao.service.MessageService;
 import com.hanbit.kakao.service.MessageServiceImpl;
 
 public class WriteActivity extends AppCompatActivity {
-
-MessageService service;
-
+    MessageService service;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_write);
-
         service = new MessageServiceImpl(this.getApplicationContext());
     }
 }

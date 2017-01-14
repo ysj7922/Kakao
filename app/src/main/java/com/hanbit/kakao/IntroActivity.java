@@ -13,10 +13,23 @@ public class IntroActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_intro);
-        Handler handler = new Handler();
-        handler.postDelayed(() {
-            startActivities(new Intent[IntroActivity.this.MainActivity.class]);
+//        Handler handler = new Handler();
+//        handler.postDelayed((){
+//            startActivity(new Intent(IntroActivity.this.MainActivity.class)
+//            finish();
+//        }. 2000);
+
+    new Handler().postDelayed(new Runnable() {
+        @Override
+        public void run() {
+            startActivity(new Intent(IntroActivity.this, MainActivity.class)
             finish();
-        }.20000);
-    }
+        }
+    }, 2000);
+
+
+protected void onStart() {
+    super.onStart();
+}
+
 }
