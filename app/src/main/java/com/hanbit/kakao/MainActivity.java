@@ -6,17 +6,17 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.hanbit.kakao.presentation.member.LoginActivity;
-import com.hanbit.kakao.presentation.member.RegistMemberActivity;
 import com.hanbit.kakao.presentation.member.ModifyMemberActivity;
+import com.hanbit.kakao.presentation.member.RegistMemberActivity;
+import com.hanbit.kakao.util.BackPressCloseHandler;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     Button regist_btn,menu_login,menu_help;
-    LinearLayout help_center;
+    //LinearLayout help_center;
     TextView menu_home;
     View mCustomView;
     private BackPressCloseHandler backPressCloseHander;
@@ -38,9 +38,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     }
 
+
     public void init() {
         regist_btn = (Button) findViewById(R.id.regist_btn);
-        //help_center = (LinearLayout) findViewById(R.id.help_center);
         menu_login = (Button) mCustomView.findViewById(R.id.menu_login);
         regist_btn.setOnClickListener(this);
         menu_help = (Button) findViewById(R.id.menu_help);
@@ -51,7 +51,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
-            case R.id.btRegist:
+            case R.id.regist_btn:
                 startActivity(new Intent(MainActivity.this, RegistMemberActivity.class));
                 break;
             case R.id.menu_help:
@@ -63,7 +63,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
     }
 
-    public void onBackPressed(){
-        backPressCloseHander.onBackPressed();
-    }
+    public void onBackPressed() {
+        super.onBackPressed();
+        backPressCloseHander.onBackPressed(); }
 }

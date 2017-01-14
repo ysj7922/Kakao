@@ -1,11 +1,8 @@
-package com.hanbit.kakao;
+package com.hanbit.kakao.util;
 
 import android.app.Activity;
 import android.widget.Toast;
 
-/**
- * Created by hb2017 on 2017-01-14.
- */
 public class BackPressCloseHandler {
 
     private long backKeyPressedTime = 0;
@@ -28,7 +25,7 @@ public class BackPressCloseHandler {
         }
     }
     public  void showGuide(){
-        toast = Toast.makeText(activity,"\'뒤로'\'버튼을 한번 더 누르시면 종료됩니다.", toast.LENGTH_SHORT);
+        toast = Toast.makeText(activity,"'\'뒤로'\' 버튼을 한번 더 누르시면 종료됩니다.", toast.LENGTH_SHORT);
         toast.show();
     }
 }

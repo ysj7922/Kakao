@@ -50,15 +50,23 @@
         android:id="@+id/regist_btn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="회원가입"/>
-    <Button
-        android:id="@+id/menu_login"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="LOGIN"/>
-</LinearLayout>
+        android:text="계정생성"
+        android:textColor="#FFFFFF"
+        android:gravity="center"
+        android:padding="3dp"
+        android:paddingRight="15dp"
+        android:textSize="12dp"
+        android:textStyle="bold"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="115dp"
+        android:layout_marginRight="115dp"
+        android:background="#1d1c1c"
+        />
 
+    </LinearLayout>
 
-
+    <activity
+        android:name=".Activity"
+        android:theme="@style/CustomTitle" />
 
 </LinearLayout>
